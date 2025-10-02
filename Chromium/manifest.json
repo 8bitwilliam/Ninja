@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "ClassDojo Downloader",
+  "version": "1.0",
+  "description": "Download photos and videos from ClassDojo Stories.",
+
+  "permissions": ["downloads"],
+
+  "host_permissions": [
+    "https://home.classdojo.com/*",
+    "https://sphotos.classdojo.com/*",
+    "https://svideos.classdojo.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://home.classdojo.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ClassDojo Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png",
+      "128": "icons/icon128.png",
+      "256": "icons/icon256.png",
+      "512": "icons/icon512.png",
+      "1024": "icons/icon1024.png"
+    }
+  }
+}
