@@ -20,7 +20,7 @@ A simple browser extension for **Chromium (Chrome/Edge)** based browsers that le
 
 ## 🔧 Installation (Chromium browsers)
 
-1. **Download this repo** (green Code button → *Download ZIP*, then unzip).
+1. **Download this repo/pre-release** (*Download ZIP*, then unzip).
 2. Open the browser e.g. for Chrome or Edge go to:
 	•	Chrome → chrome://extensions/
 	•	Edge → edge://extensions/
