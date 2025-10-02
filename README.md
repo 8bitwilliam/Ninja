@@ -1,2 +1,2 @@
 # Ninja
-A simple browser extension for **Chrome and Microsoft Edge** that lets parents/guardians **download photos and videos from ClassDojo Stories**.  
+A simple browser extension for **Chromium (Chrome/Edge** based browesers that lets parents/guardians **download photos and videos from ClassDojo Stories**.  
