@@ -28,3 +28,5 @@ A simple browser extension for **Chromium (Chrome/Edge)** based browsers that le
 4. Click Load unpacked.
 5. Select the Chromium folder (it contains manifest.json).
 6. You’ll now see the "Ninja" icon in your toolbar.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P8nsjQuUTZE?si=hhFKY9-AkDXUNrkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
