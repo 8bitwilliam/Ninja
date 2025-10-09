@@ -23,15 +23,25 @@ A simple browser extension for **Chromium (Chrome/Edge)** based browsers that le
 - 🗂️ **Automatic folder organization** – creates a master folder named **“ClassDojo Downloads”** with daily subfolders:  
 
 Downloads/
+
 └── ClassDojo Downloads/
+
 ├── 2025-10-07/
+
 │   ├── 2025-10-07_photo_1.jpg
+
 │   ├── 2025-10-07_video_1.mp4
+
 │   ├── 2025-10-07.txt
+
 ├── 2025-10-08/
+
 │   ├── …
+
 ├── 2025-10-09/
+
 │   ├── …
+
 
 
 - 🔄 **Auto-scrolls** through the entire feed to load all posts  
