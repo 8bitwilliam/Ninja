@@ -59,13 +59,21 @@ The extension will:
 
 ## 📁 Output Example
 ClassDojo Downloads/
+
 ├── 2025-10-14/
+
 │   ├── 2025-10-14_photo_abc123.jpg
+
 │   ├── 2025-10-14_video_456xyz.mp4
+
 │   └── 2025-10-14.txt
+
 ├── 2025-10-15/
+
 │   ├── 2025-10-15_photo_789lmn.jpg
+
 │   ├── 2025-10-15.txt
+
 └── data.json
 
 
