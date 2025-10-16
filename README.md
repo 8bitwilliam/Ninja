@@ -1,100 +1,81 @@
-# Ninja ClassDojo Downloader 🥷📸
+# 🥷 Ninja Archive 3.2
 
-A simple browser extension for **Chromium (Chrome/Edge)** based browsers that lets parents/guardians **download photos, videos, and story captions from ClassDojo Stories**.  
-✅ Photos download automatically  
-✅ Videos download automatically  
-✅ Story captions, teacher names, and class info are saved into text archives  
-✅ Automatically scrolls to load all posts before downloading  
-✅ Organizes everything neatly inside a **“ClassDojo Downloads”** folder with **one subfolder per day**
+**Ninja Archive** is a simple, privacy-friendly browser extension for **Chromium-based browsers** (Chrome, Edge, Brave, etc.).  
+It allows parents and guardians to **archive all their child’s ClassDojo Story content** — including photos, videos, PDFs, captions, and full JSON metadata — automatically organised by date.
 
 ---
 
 ## ✨ Features
 
-- 📅 **Select a date range** – download only between chosen dates  
-- 🖼️ **Photos** – saved automatically with filenames like:  
-  `2025-10-06_photo_ab12cd34.jpg`  
-- 🎥 **Videos** – saved automatically in Chrome/Edge  
-- 🧾 **Story archive files (.txt)** – each day’s posts saved to text files containing:  
-  - Teacher name  
-  - Class name  
-  - Story caption text  
-  - Linked photo/video filenames  
-- 🗂️ **Automatic folder organization** – creates a master folder named **“ClassDojo Downloads”** with daily subfolders:  
-
-Downloads/
-
-└── ClassDojo Downloads/
-
-├── 2025-10-07/
-
-│   ├── 2025-10-07_photo_1.jpg
-
-│   ├── 2025-10-07_video_1.mp4
-
-│   ├── 2025-10-07.txt
-
-├── 2025-10-08/
-
-│   ├── …
-
-├── 2025-10-09/
-
-│   ├── …
-
-
-
-- 🔄 **Auto-scrolls** through the entire feed to load all posts  
-- 🔒 **Permissions** – limited to only what’s required:  
-- `home.classdojo.com`  
-- `sphotos.classdojo.com`  
-- `svideos.classdojo.com`  
+- 📅 **Date range filtering** – choose the period you wish to download  
+- 🖼️ **Photos** – automatically saved as JPG/PNG files  
+- 🎥 **Videos** – saved in their original MP4 format  
+- 📄 **PDFs** – download
+- 🧾 **Story text export** – captions, teacher names, and post text saved in plain-text `.txt` archives  
+- 💾 **JSON archive** – full raw post data (`data.json`) included for reference  
+- 🗂️ **Automatic folder sorting** – all files neatly organised by day under  
+  `ClassDojo Downloads/YYYY-MM-DD/`  
+- 🧠 **No external servers** – all processing runs locally in your browser  
 
 ---
 
-## 📄 PDF Handling
+## 🔒 Permissions
 
-The downloader **detects and skips all PDF attachments automatically**.  
+The extension only requests access to the specific ClassDojo domains required for content retrieval:
+home.classdojo.com
+sphotos.classdojo.com
+svideos.classdojo.com
 
 ---
 
-## 🔧 Installation (Chromium browsers)
+## 🧭 Installation (Chromium browsers)
 
-1. **Download this repo/pre-release** (*Download ZIP*, then unzip).  
-2. Open your browser’s extensions page:  
- - **Chrome** → `chrome://extensions/`  
- - **Edge** → `edge://extensions/`  
-3. Enable **Developer Mode** (toggle in the top right).  
-4. Click **Load unpacked**.  
-5. Select the **Chromium** folder (it contains `manifest.json`).  
-6. You’ll now see the **🥷 Ninja icon** in your toolbar.  
+1. Download the latest ZIP release from the [**Releases page**](https://github.com/8bitwilliam/Ninja/releases).  
+2. Unzip the archive to a convenient folder.  
+3. Open your browser’s extensions page:  
+   - **Chrome** → `chrome://extensions/`  
+   - **Edge** → `edge://extensions/`  
+4. Enable **Developer Mode** (toggle in the top-right).  
+5. Click **Load unpacked** and select the extracted folder containing `manifest.json`.  
+6. You’ll now see the **🥷 Ninja Archive** icon appear in your browser toolbar.  
 
 ---
 
 ## ▶️ Usage
 
-1. Log in to [ClassDojo](https://home.classdojo.com/) as a **parent/guardian**.  
-2. Open your **child’s Story page**.  
-3. Click the **Ninja icon** in your browser toolbar.  
-4. Choose your desired **date range**.  
-5. Click **Download** – the extension will:  
- - Automatically scroll the Story page to load every post  
- - Download all photos and videos  
- - Create daily `.txt` archive files containing story text and metadata  
- - Save everything inside a **“ClassDojo Downloads”** folder, neatly sorted by date  
+1. Log in to **ClassDojo** as a parent or guardian.  
+2. Navigate to your child’s **Story** page.  
+3. Click the **Ninja Archive** icon in your browser's extension icon or toolbar.   
+4. Choose a start and end date.  
+5. Click **Download**.  
+
+The extension will:  
+- Automatically scan the Story feed  
+- Download all attachments (photos, videos, PDFs)  
+- Create `.txt` files containing the teacher name and story text with filenames. 
+- Generate a `data.json` file containing the full metadata for all posts  
 
 ---
 
-## 🆕 Version 1.7
+## 📁 Output Example
+ClassDojo Downloads/
+├── 2025-10-14/
+│   ├── 2025-10-14_photo_abc123.jpg
+│   ├── 2025-10-14_video_456xyz.mp4
+│   └── 2025-10-14.txt
+├── 2025-10-15/
+│   ├── 2025-10-15_photo_789lmn.jpg
+│   ├── 2025-10-15.txt
+└── data.json
 
-- Fixed metadata logic – `.txt` files now always generate within the selected date range  
-- Added automatic folder organization:  
-- A master folder **“ClassDojo Downloads”**  
-- Subfolders for each date (one per day)  
-- Improved stability and Chrome compatibility with background service worker  
+
+Each folder represents a single day’s posts.  
+Every `.txt` file summarises the teacher, story caption, and linked attachments.
 
 ---
 
-YouTube
+## 🧩 Technical Notes
 
-[![Watch the video](https://img.youtube.com/vi/P8nsjQuUTZE/maxresdefault.jpg)](https://www.youtube.com/watch?v=P8nsjQuUTZE)
+- **Manifest V3** – fully Chrome/Edge-compliant  
+- **All local** – no cloud services or tracking  
+- **Region-aware** – 🇬🇧 🇦🇺 🇳🇿 🇨🇦 🇺🇸 🇪🇺 - supports multiple ClassDojo content formats  
