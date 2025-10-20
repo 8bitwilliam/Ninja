@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Ninja Archive",
+  "version": "3.2",
+  "description": "Archive all your child's story content — captions, photos, videos, PDFs, with full JSON metadata — all automatically organised by date.",
+  "permissions": [
+    "downloads",
+    "downloads.open",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://home.classdojo.com/*",
+    "https://sphotos.classdojo.com/*",
+    "https://svideos.classdojo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://home.classdojo.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
